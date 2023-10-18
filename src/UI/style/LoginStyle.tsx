@@ -8,7 +8,7 @@ const loginStyles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'center',
-        
+        backgroundColor:'white'
 
     },
     loginContainer:{

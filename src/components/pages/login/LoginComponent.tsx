@@ -4,6 +4,8 @@ import loginStyles from '../../../UI/style/LoginStyle';
 import Input from '../../input';
 
 interface LoginProps {
+    //mailin type string olucak 
+    //
     mail:string
     setEmail:(params:string)=> void;
 }
@@ -20,15 +22,15 @@ export default function LoginComponent({ mail, setEmail }: LoginProps) {
             />
             <View style={loginStyles.loginContainer}>
 
-                <Text style={loginStyles.title}>Wissen Academie</Text>
+                <Text style={loginStyles.title}>Wissen Academia</Text>
                 <Input
                     setValue={setEmail}
                     value={mail}
                     placeholder="E-posta"
                 />
                 <Input
-                setValue={(text)=> console.log("text",text)}
-                    placeholder='şifreee'
+                setValue={(text)=> console.log("şifre",text)}
+                    placeholder='şifre'
                 />
                
                 <TouchableOpacity style={loginStyles.loginButton}>
