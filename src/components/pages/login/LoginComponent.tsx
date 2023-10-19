@@ -2,17 +2,20 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import loginStyles from '../../../UI/style/LoginStyle';
 import Input from '../../input';
+import Button from '../../button';
 
 interface LoginProps {
     //mailin type string olucak 
     //
-    mail:string
-    setEmail:(params:string)=> void;
+    mail: string
+    setEmail: (params: string) => void;
+    onNext:(name:string)=>void;
 }
 
 
-export default function LoginComponent({ mail, setEmail }: LoginProps) {
-    console.log("mail adresi",mail)
+export default function LoginComponent({ mail, setEmail,onNext }: LoginProps) {
+    // console.log("mail adresi", mail)
+    
     return (
         <View style={loginStyles.container}>
             <Image
@@ -29,13 +32,23 @@ export default function LoginComponent({ mail, setEmail }: LoginProps) {
                     placeholder="E-posta"
                 />
                 <Input
-                setValue={(text)=> console.log("şifre",text)}
+                    setValue={(text) => console.log("şifre", text)}
                     placeholder='şifre'
+                    />
+                
+                <Button variant='lineText' onPress={() => onNext("forgotPassword")}
+                        label='FargotPassword'
+                        />
+                <Button
+                    variant='primary'
+                    onPress={() => console.log("girdi1")}
+                    label='login'
+                    />
+                <Button
+                variant='outline'
+                    onPress={() => onNext("register")}
+                    label='Register'
                 />
-               
-                <TouchableOpacity style={loginStyles.loginButton}>
-                    <Text style={loginStyles.loginText}>Login</Text>
-                </TouchableOpacity>
             </View>
         </View>
     )

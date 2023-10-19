@@ -30,20 +30,8 @@ const loginStyles = StyleSheet.create({
         fontSize:24,
         color:'black',
         fontWeight:"800"
-    },
-    
-    loginButton:{
-        width:'40%',
-        backgroundColor:'rgb(74, 209, 255)',
-        alignItems:'center',
-        borderRadius:4,
-        padding:8
-
-    },
-    loginText:{
-        color:'white',
-        fontWeight:'600'
     }
+    
 });
 
 export default loginStyles;

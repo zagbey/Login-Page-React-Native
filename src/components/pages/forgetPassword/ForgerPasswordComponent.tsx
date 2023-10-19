@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function AuthNavigation() {
+export default function ForgerPasswordComponent() {
   return (
     <View>
-      <Text>AuthNavigation</Text>
+      <Text>ForgerPasswordComponent</Text>
     </View>
   )
 }
